@@ -4,16 +4,12 @@ using System.Collections.Generic;
 
 namespace Novemberprojekt
 {
-    public class Ingredient
+    public class Ingredient: Stats
     {
 
-        private static Random generator = new Random();
+        
         private List<string> ingredientName = new List<string>() {"beef", "pork", "chicken", "rice", "pasta", "potato", "union"};
-        private int salty;
-        private int sweet;
-        private int bitter;
-        private int sour;
-        private int umami;
+        
 
         private int i;
 
@@ -24,12 +20,20 @@ namespace Novemberprojekt
 
             i = generator.Next(0, ingredientName.Count);
 
+            IngredientValue();
+
             return ingredientName[i];
 
         }
 
-        public void IngredientValue()
+        private void IngredientValue()
         {
+
+            salty = generator.Next(0, 1);
+            sweet = generator.Next(0, 1);
+            sour = generator.Next(0, 1);
+            bitter = generator.Next(0, 1);
+            umami = generator.Next(0, 1);
             
         }
 

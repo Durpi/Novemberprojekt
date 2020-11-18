@@ -2,8 +2,10 @@ using System;
 
 namespace Novemberprojekt
 {
-    public class Jury
+    public class Jury: Stats
     {
+
+        
         
     }
 }
