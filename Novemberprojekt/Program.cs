@@ -6,6 +6,13 @@ namespace Novemberprojekt
     {
         static void Main(string[] args)
         {
+            Ingredient ingredient = new Ingredient();
+            Jury jury = new Jury();
+
+
+            
+
+            Console.ReadLine();
             
         }
     }

@@ -29,11 +29,11 @@ namespace Novemberprojekt
         private void IngredientValue()
         {
 
-            salty = generator.Next(0, 1);
-            sweet = generator.Next(0, 1);
-            sour = generator.Next(0, 1);
-            bitter = generator.Next(0, 1);
-            umami = generator.Next(0, 1);
+            salty = generator.Next(0, 2);
+            sweet = generator.Next(0, 2);
+            sour = generator.Next(0, 2);
+            bitter = generator.Next(0, 2);
+            umami = generator.Next(0, 2);
             
         }
 
