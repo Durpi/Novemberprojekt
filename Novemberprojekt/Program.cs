@@ -7,7 +7,7 @@ namespace Novemberprojekt
     {
         static void Main(string[] args)
         {
-            Ingredient ingredient = new Ingredient();
+            Dish dish = new Dish();
             Jury jury = new Jury();
             
             bool play = true;
@@ -18,11 +18,50 @@ namespace Novemberprojekt
                 
 
                 Console.WriteLine("Welcome to Master Chef!");
-                Sleep();
-                Console.Clear();
-                Console.WriteLine("You will pick an ingredient that you like to have in your dish" +
-                "\nThis ingredient will have a random taste" +
-                "\nand if your lucky the jury will like the dish you made");
+
+                Sleep(3000);
+                
+                Console.WriteLine("You will get a dish to make" +
+                "\nThis dish will have a random taste" +
+                "\nand if you're lucky the jury will like the dish you made");
+
+                Sleep(10000);
+
+                Console.WriteLine("You decided to make a " + dish.GetDish() + "! Let's hope the jury likes it");
+
+                Sleep(4000);
+
+                jury.JuryJudment();
+
+
+                Sleep(10000);
+
+                Console.WriteLine("Would you like to try and impress the jury again?" +
+                "\n[yes] or [no]");
+
+                string playAgainAns = Console.ReadLine().ToLower();
+
+                while (playAgainAns != "yes" && playAgainAns != "no")
+                {
+                    Console.Clear();
+                    Console.WriteLine("Would you like to try and impress the jury again?" +
+                    "\n[yes] or [no]");
+                    playAgainAns = Console.ReadLine().ToLower();
+                }
+
+                if (playAgainAns == "yes")
+                {
+                    Console.WriteLine("Then let's go again");
+                    Sleep(2000);
+                }
+                else if (playAgainAns == "no")
+                {
+                    Console.WriteLine("Hope you come again!");
+                    Sleep(2000);
+                    play = false;
+
+                }
+
 
 
             }
@@ -38,10 +77,11 @@ namespace Novemberprojekt
         }
 
 
-        private static void Sleep()
+        private static void Sleep(int i)
         {
 
-            Thread.Sleep(2000);
+            Thread.Sleep(i);
+            Console.Clear();
 
 
 
