@@ -7,14 +7,19 @@ namespace Novemberprojekt
     {
         static void Main(string[] args)
         {
-            Dish dish = new Dish();
-            Jury jury = new Jury();
             
+            //I use a bool to continue the game loop
             bool play = true;
 
-            
+            //A while loop to let the player decide if they want to play again
             while (play == true)
             {
+                
+                //I take in the classes here to reset the Jury constructor after each playthrough
+                //The Dish class takes in here to keep the classes together
+                Jury jury = new Jury();
+                Dish dish = new Dish();
+
                 
 
                 Console.WriteLine("Welcome to Master Chef!");
@@ -27,20 +32,24 @@ namespace Novemberprojekt
 
                 Sleep(10000);
 
+                //Runs the GetDish() and writes the text it returns
                 Console.WriteLine("You decided to make a " + dish.GetDish() + "! Let's hope the jury likes it");
 
                 Sleep(4000);
 
+                //Runs JuryJudment()
                 jury.JuryJudment();
 
 
                 Sleep(10000);
 
+                //Play again or not
                 Console.WriteLine("Would you like to try and impress the jury again?" +
                 "\n[yes] or [no]");
 
                 string playAgainAns = Console.ReadLine().ToLower();
 
+                //So they can only continue if they write yes or no
                 while (playAgainAns != "yes" && playAgainAns != "no")
                 {
                     Console.Clear();
@@ -49,6 +58,7 @@ namespace Novemberprojekt
                     playAgainAns = Console.ReadLine().ToLower();
                 }
 
+                //Determines if the Play loop continues
                 if (playAgainAns == "yes")
                 {
                     Console.WriteLine("Then let's go again");
@@ -66,10 +76,6 @@ namespace Novemberprojekt
 
             }
 
-
-            
-
-
             
 
             Console.ReadLine();
@@ -77,6 +83,8 @@ namespace Novemberprojekt
         }
 
 
+        //I need to put this a lot in my code so i put it together
+        //Takes in how long the sleep will be
         private static void Sleep(int i)
         {
 
