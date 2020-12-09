@@ -78,7 +78,7 @@ namespace Novemberprojekt
 
             
 
-            Console.ReadLine();
+            
             
         }
 

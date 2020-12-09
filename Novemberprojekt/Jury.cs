@@ -5,8 +5,11 @@ namespace Novemberprojekt
     //Inherits the traits from "Stats"
     public class Jury: Stats
     {
+        //All the variables that are used in this class
         //Takes in the class "Dish"
         Dish dish = new Dish();
+
+        private int like;
 
 
         
@@ -23,7 +26,7 @@ namespace Novemberprojekt
         //Compares the tastes of the dish and the jurys likes to see if the dish was good
         public void JuryJudment()
         {
-            int like = 0;
+            like = 0;
 
 
             if (salty == dish.salty)
