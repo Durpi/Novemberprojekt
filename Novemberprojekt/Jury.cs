@@ -7,7 +7,7 @@ namespace Novemberprojekt
     {
         //All the variables that are used in this class
         //Takes in the class "Dish"
-        Dish dish = new Dish();
+        
 
         private int like;
 
@@ -24,8 +24,10 @@ namespace Novemberprojekt
         }
 
         //Compares the tastes of the dish and the jurys likes to see if the dish was good
-        public void JuryJudment()
+        public void JuryJudment(Dish dish)
         {
+            
+
             like = 0;
 
 

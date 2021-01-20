@@ -38,7 +38,7 @@ namespace Novemberprojekt
                 Sleep(4000);
 
                 //Runs JuryJudment()
-                jury.JuryJudment();
+                jury.JuryJudment(dish);
 
 
                 Sleep(10000);
